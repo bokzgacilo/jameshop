@@ -21,7 +21,7 @@ function Signin() {
   };
 
   return (
-    <>
+    <div class="box">
       <div class="container">
         <span class="title">Sign in</span>
         <form onSubmit={handleSubmit}>
@@ -59,7 +59,7 @@ function Signin() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
