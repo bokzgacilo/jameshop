@@ -1,7 +1,7 @@
 function Home() {
   return (
     <>
-      <h2>Jameshop</h2>
+      <h2>Products</h2>
     </>
   );
 }
