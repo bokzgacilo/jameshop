@@ -1,0 +1,20 @@
+/* Desktop View */
+
+@media only screen and (min-width: 992px) {
+  .inputs {
+    width: 30%;
+    height: 58px;
+  }
+  .forgot-container {
+    width: 30%;
+  }
+  .button-container {
+    width: 30%;
+  }
+  .button-design {
+    height: 58px;
+  }
+  .login-with {
+    width: 30%;
+  }
+}

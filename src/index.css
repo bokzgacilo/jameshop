@@ -9,10 +9,12 @@
 }
 
 :root {
-  
+  width: 100vw;
 }
 
-*, p, h4 {
+*,
+p,
+h4 {
   padding: 0;
   margin: 0 !important;
   font-family: Nunito-Regular;
