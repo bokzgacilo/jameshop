@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Landing from "./pages/Landing";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
+import Admin from "./view/Admin";
 import Home from "./view/Home";
 import MyOrders from "./view/MyOrders";
 
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Landing />} >
             <Route index element={<Home />} />
             <Route path="/myorders" element={<MyOrders />} />
+            <Route path="/admin" element={<Admin />} />
           </Route>
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />

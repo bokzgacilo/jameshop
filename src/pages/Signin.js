@@ -1,39 +1,29 @@
 import { useState, useEffect } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
+import {  auth, signInWithGoogle } from "../firebase";
 
 function Signin () {
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
+  const [user, loading] = useAuthState(auth);
   const navigate = useNavigate();
 
   useEffect(() => {
-    
-  })
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if(name === 'testing' || password === 'testing'){
-      alert('signed')
-      sessionStorage.setItem('issigned', true)
-      navigate('/');
-    }else {
-      alert('not signed')
+    if(loading) {
+      return;
     }
-  }
+
+    if(user){
+      navigate('/')
+    };
+
+  }, [user, loading]);
+
 
   return (
     <>
       <h2>Signin</h2>
       <div>
-        <form onSubmit={handleSubmit}>
-          <input onChange={(e) => setName(e.target.value)} type="text" placeholder="email" />
-          <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="password" />
-          <button>Sign In</button>
-          <button>Register</button>
-        </form>
-        <h5>Or you can sign as</h5>
-        <button>Facebook</button>
-        <button>Google</button>
+        <button onClick={signInWithGoogle}>Google</button>
       </div>
     </>
   );
