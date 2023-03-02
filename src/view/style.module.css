@@ -1,0 +1,27 @@
+.new_product_list, .all_product_list {
+  display: flex;
+  flex-direction: row;
+  /* background-color: red;1 */
+}
+
+.new_product {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 17vw;
+}
+
+.new_product > .description {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+.product_image {
+  align-self: center;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(239, 239, 239);
+  object-fit: scale-down;
+}
