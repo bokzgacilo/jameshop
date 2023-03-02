@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate, Link } from "react-router-dom";
-import {  auth, signInWithGoogle } from "../firebase";
+import { auth, signInWithGoogle } from "../firebase";
 
 function Signin() {
   const [user, loading, error] = useAuthState(auth);
@@ -42,9 +42,13 @@ function Signin() {
               <span class="forgot">Forgot?</span>
             </div>
             <div class="button-container">
-              <button class="button-design">Sign In</button>
-              <Link to="/register">
-                <button button class="button-design">Register</button>
+              <Link class="link">
+                <button class="button-design">Sign In</button>
+              </Link>
+              <Link class="link" to="/register">
+                <button button class="button-design">
+                  Register
+                </button>
               </Link>
             </div>
           </div>
@@ -53,7 +57,9 @@ function Signin() {
           <span class="login-label">Or login with</span>
           <div class="socmed-button">
             <div class="socmedbtn">Facebook</div>
-            <div class="socmedbtn" onClick={signInWithGoogle}>Google</div>
+            <div class="socmedbtn" onClick={signInWithGoogle}>
+              Google
+            </div>
           </div>
         </div>
       </div>
