@@ -54,6 +54,12 @@ form {
   padding: 0 20px 0 38px;
 }
 
+.inputs:focus {
+  border: 1px solid #827ffe;
+  outline-offset: 0px;
+  outline: none;
+}
+
 ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
   color: #8f8fa1;
@@ -72,6 +78,8 @@ form {
 .checkbox {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 4px;
 }
 
@@ -110,6 +118,12 @@ form {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.button-design:hover {
+  background-color: #403866;
+  transition: all 0.4s;
 }
 
 .login-with {
@@ -159,4 +173,46 @@ form {
 
 .socmedbtn:nth-child(2) {
   color: #555555;
+}
+
+.clear {
+  clear: both;
+}
+
+.checkBox {
+  display: block;
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 1.5px #827ffe;
+}
+
+.checkBox div {
+  width: 60px;
+  height: 60px;
+  background-color: #827ffe;
+  top: -52px;
+  left: -52px;
+  position: absolute;
+  transform: rotateZ(45deg);
+  z-index: 100;
+}
+
+.checkBox input[type="checkbox"]:checked + div {
+  left: -10px;
+  top: -10px;
+}
+
+.checkBox input[type="checkbox"] {
+  position: absolute;
+  left: 50px;
+  visibility: hidden;
+}
+
+.transition {
+  transition: 300ms ease;
 }

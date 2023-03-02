@@ -40,7 +40,10 @@ function Signin() {
             />
             <div class="forgot-container">
               <div class="checkbox">
-                <input type="checkbox" />
+                <label class="checkBox">
+                  <input id="ch1" type="checkbox" />
+                  <div class="transition"></div>
+                </label>
                 <span class="checkbox-label">Remember me</span>
               </div>
               <span class="forgot">Forgot?</span>
