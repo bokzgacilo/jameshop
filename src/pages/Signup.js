@@ -6,7 +6,7 @@ function Signup() {
     <>
       <h2>Register</h2>
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form>
           <input type="text" placeholder="fullname" />
           <input type="text" placeholder="email" />
           <input type="password" placeholder="password" />

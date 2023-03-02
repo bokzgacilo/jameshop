@@ -1,5 +1,6 @@
 
 import { initializeApp } from "firebase/app";
+import Swal from "sweetalert2";
 
 import {
   GoogleAuthProvider,
@@ -43,6 +44,7 @@ const signInWithGoogle = async () => {
     const user = res.user;
     const q = query(collection(db, "users"), where("uid", "==", user.uid));
     const docs = await getDocs(q);
+
     if (docs.docs.length === 0) {
       await addDoc(collection(db, "users"), {
         uid: user.uid,
@@ -51,6 +53,14 @@ const signInWithGoogle = async () => {
         email: user.email,
       });
     }
+
+    Swal.fire({
+      title: "Success",
+      text: "Alert successful",
+      icon: "success",
+      confirmButtonText: "OK",
+    });
+
   } catch (err) {
     console.error(err);
     alert(err.message);
