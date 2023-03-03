@@ -20,3 +20,16 @@ h4 {
   font-family: Nunito-Regular;
   box-sizing: border-box;
 }
+
+:root {
+  --ionicon-stroke-width: 32px;
+  --ion-color-primary: #fff;
+  --ion-color-secondary: #000;
+  --ion-color-tertiary: #f4a942;
+  --ion-color-success: #10dc60;
+  --ion-color-warning: #ffce00;
+  --ion-color-danger: #f14141;
+  --ion-color-light: #f4f5f8;
+  --ion-color-medium: #0563bb;
+  --ion-color-dark: #45505b;
+}

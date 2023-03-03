@@ -221,3 +221,40 @@ form {
 .transition {
   transition: 300ms ease;
 }
+
+/* Landing Page */
+
+.landing-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  transition-duration: 500ms;
+  background-color: #fff;
+  z-index: 50;
+  height: 100%;
+  background-color: #fff;
+  border: 1px rgb(243, 244, 246) solid;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+}
+
+.navigator-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburger-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 12px;
+  top: 12px;
+  transition: 300ms ease;
+}
