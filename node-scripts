@@ -1,0 +1,4 @@
+Make sure to go to end directory first
+
+1. Running backend "npm run devStart"
+2. Running frontend "npm run"
